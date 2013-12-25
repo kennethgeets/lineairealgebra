@@ -315,6 +315,49 @@ Id^\alpha_\beta = \left(
 \right)
 \]
 
+\subsection{Oefening 11}
+We beschouwen allereerst het voorschrift als co\"ordinaten volgens de standaardbasis.
+\[
+\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+a \\ b \\ c \\ d
+\end{pmatrix}
+\text{ en }
+\begin{pmatrix}
+a+b+d & a+b+c\\
+b+c+d & a+c+d
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+a+b+d \\ a+b+c \\ b+c+d \\ a+c+d
+\end{pmatrix}
+\]
+$T$ volgens de standaardbasis ziet er als volgt uit. 
+\[
+T_\epsilon =
+\begin{pmatrix}
+1 & 1 & 0 & 1\\
+1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1\\
+1 & 0 & 1 & 1
+\end{pmatrix}
+\]
+De karakteristieke veelterm van $T$ is dus de volgende.
+\[
+\begin{vmatrix}
+1-\lambda & 1 & 0 & 1\\
+1 & 1-\lambda & 1 & 0\\
+0 & 1 & 1-\lambda & 1\\
+1 & 0 & 1 & 1-\lambda
+\end{vmatrix}
+= 0
+\]
+%TODO
+
 
 \subsection{Oefening 16}
 Met een rekenmachine vinden we dat het antwoord de volgende matrix is.
@@ -493,6 +536,100 @@ Nu geldt voor elke eigenwaarde $\lambda_i$ die niet nul is dat $(N*v_i - v_i)$ d
 Hieruit besluiten we dat voor elke eigenvector $v_i$ van $P$ met eigenwaarde $\lambda_i$ niet gelijk aan nul dat dit ook een eigenvector van $N$ is met eigenwaarde 1.
 We zien in dat $N$ minstens evenveel eigenvectoren heeft als $P$ eigenwaarden heeft die niet nul zijn. Dit aantal is immers de rang van $P$. \\
 De eigenruimte van $N$ is dus minstens rang($P$)-dimensionaal.
+\end{proof}
+
+
+\subsection{Oefening 18}
+\subsubsection*{a)}
+We weten dat de dimensies van $E_{\lambda_i}$ alledrie $1$ zijn.
+We kiezen $v_1$ als basis van $E_{\lambda_1}$ zo ook $v_2$ en $v_3$ respectievelijk als basissen van $E_{\lambda_2}$ en $E_{\lambda_3}$.
+Vervolgens kiezen we $\{v_1,v_2\}$ en $v_3$ respectievelijk als basissen van $E_{\mu_1}$ en $E_{\mu_2}$.
+Beschouw nu $v_1$ als volgt.
+\[
+A\cdot B\cdot v_1 = A\cdot\mu_1v_1 = \mu_1Av_1= \mu_1\lambda_1v_1
+\]
+Dit houdt in dat $\mu_1\lambda_1$ een eigenwaarde is van $A\cdot B$ met eigenvector $v_1$ en eigenruimte $E_{\mu_1\lambda_1} = vct(\{v_1\})$. Op dezelfde manier vinden we dat $mu_1*lambda_2$ en $mu_2*lambda_3$ eigenwaarden zijn van $A\cdot B$, met respectievelik eigenvector $v2$, $v3$ en eigenruimten $E_{\mu_1*\lambda_2} = vct(\{v_2\})$ en $E_{\mu_2*  \lambda_3} = vct(\{v_3\})$
+
+\subsubsection*{b)}
+\[
+B\cdot A\cdot v1
+= B\cdot \lambda_1\cdot v1
+= \lambda_1\cdot B\cdot v1
+= \lambda_1\cdot \mu_1\cdot v1
+= \mu_1\cdot \lambda_1\cdot v1
+= \mu_1\cdot A\cdot v1
+= A\cdot \mu_1\cdot v1
+= A\cdot B\cdot v1
+\]
+\[
+B\cdot A = A\cdot B
+\]
+
+
+\section{Opdrachten}
+\subsection{Opdracht 5.10 p 185}
+%TODO
+
+\subsection{Opdracht 5.34 p 206}
+Zij $\lambda$ een complexe niet-re\"ele eigenwaarde van een re\"ele vierkante matrix $A$.
+\[
+\exists x,y \in \mathbb{R}: \lambda = x +yi
+\]
+
+\subsubsection*{Te Bewijzen}
+$\lambda$ heeft geen re\"ele eigenvectoren.
+
+\subsubsection*{Bewijs}
+\begin{proof}
+Bewijs uit het ongerijmde.\\
+We gaan ervan uit dat $v$ een re\"ele eigenvector is van $A$ met $\lambda$ als eigenwaarde.
+\[
+A\cdot v = \lambda v
+\]
+\[
+A\cdot v = (x+yi) v= xv + yiv
+\]
+\[
+A\cdot v - xv = yiv
+\]
+In bovenstaande gelijkheid is het linkerlid zeker re\"l en het rechterlid zeker complex.
+De gelijkheid geldt dus niet. 
+\end{proof}
+
+
+\subsection{Opdracht 5.42 p 211}
+Zij $L_n$ een Leslie-matrix.
+\[
+L_n =
+\begin{pmatrix}
+f_1 & f_2 & \cdots & \cdots & f_2\\
+o_1 & 0 & \cdots & \cdots & 0\\
+0 & o_2 & \cdots & \cdots & 0\\
+\vdots & \vdots & \ddots & & \vdots\\
+\vdots & \vdots & & & \vdots\\
+0 & 0 & \cdots & o_{n-1} & 0
+\end{pmatrix}
+\]
+
+\subsubsection*{Te Bewijzen}
+\[
+\phi_{L_{n}} =X^{n} -\sum_{i=1}^n \left(\prod_{j=1}^{i-1} o_{j} \right)f_1X^{n-i}
+\]
+
+\subsubsection*{Bewijs}
+\begin{proof}
+\[
+\begin{vmatrix}
+f_1-\lambda\mathbb{I}_n & f_2 & \cdots & \cdots & f_2\\
+o_1 & 0-\lambda\mathbb{I}_n & \cdots & \cdots & 0\\
+0 & o_2 & \cdots & \cdots & 0\\
+\vdots & \vdots & \ddots & & \vdots\\
+\vdots & \vdots & & & \vdots\\
+0 & 0 & \cdots & o_{n-1} & \lambda\mathbb{I}_n
+\end{vmatrix}
+= 0
+\]
+We bekomen de gezochtte veelterm door simpelweg de bovenstaande determinant recursief naar de onderste rij te ontwikkelen.
 \end{proof}
 
 \end{document}

@@ -41,5 +41,65 @@ Omdat $dim(V)$ gelijk is aan $dim(W)$ bestaan er lineaire bijectieve co\"ordinaa
 \end{proof}
 
 \subsection{Oefening 5}
+Zie \ref{matrix_van_lineaire_afbeeldingen_tov_gegeven_basissen} voor meer uitleg.
+$L_{\alpha}^\beta$ ziet er als volgt uit.
+\[
+L_{\alpha}^\beta = Id_{\epsilon_2}^\beta \cdot L_{\epsilon_1}^{\epsilon_2} \cdot Id_{\alpha}^{\epsilon_1}
+\]
+
+\subsection{Oefening 6}
+$L_{\alpha}^\beta$ en $Id_{\alpha}^\beta$ zijn gelijk omdat $L$ een lineaire transformatie is.
+
+\subsection{Oefening 7}
+Zie \ref{4.39}.
+
+\subsection{Oefening 8}
+Ja, want $L$ behoudt de lineaire combinatie.
+
+\subsection{Oefening 9}
+Zij $V_1$ en $V_2$ vectorruimten en $L$ een lineaire afbeelding van $V_1$ naar $V_2$. Zijn $U_2$ een deelruimte van $V_2$
+
+\subsubsection*{Te Bewijzen}
+$U_1$ is een deelruimte van $V_1$.
+\[
+U_1 = \{x \in V_1\ |\  L(x) \in U_2 \}
+\]
+
+\subsubsection*{Bewijs}
+\begin{proof}
+Kies willekeurige $u_1, u_2 \in U_1$ en $\lambda_1,\lambda_2 \in \mathbb{R}$.
+\[
+\lambda_1u_1 + \lambda_2u_2 \in U_1
+\]
+Bovenstaande bewering geldt omdat ze equivalent is aan de volgende, en $U_2$ is een deelruimte van $V_2$.
+\[
+L(\lambda_1u_1 + \lambda_2u_2)
+=\lambda_1L(u_1) + \lambda_2L(u_2)
+ \in U_2
+\]
+\end{proof}
+
+\subsection{Oefening 10}
+$Hom_{\mathbb{R}}(V,W)$ is isomorf met $\mathbb{R}^{m\times n}$.
+
+\subsection{Oefening 11}
+Waar, let op de indices.
+
+\subsection{Oefening 12}
+Overal waar je zegt "...\emph{de matrix van basisverandering}..." in plaats van "... een matrix van basisverandering...".
+
+\subsection{Oefening 13}
+De lineaire afbeeldingen die overeenkomen met de standaardbasis van $\mathbb{R}^{m\times n}$ kunnen als basis dienen voor $Hom_\mathbb{R}(V,W)$.
+
+\subsection{Oefening 14}
+Het bewijs is volledig analoog. (Zie \ref{4.35}.)
+
+\subsection{Oefening 15}
+Zie \ref{4.34}.
+
+\subsection{Oefening 16}
+Zij $x_p$ een particuliere oplossing van het stelsel.
+De oplossingsverzameling van het stelsel is dan de oorsprong,  een rechte door $x_p$ of een vlak door $x_p$.
+
 
 \end{document}
