@@ -827,10 +827,110 @@ In 28 a hebben we bewezen dat $V$ een vrij deel is van $\mathbb{R}^\mathbb{N}$. 
 TODO <wat betekent $\mathbb{R}^\mathbb{N}$?>
 \end{proof}
 
+
+\subsection{Oefening 29}
+\subsubsection*{(a)}
+Niet waar. Tegenvoorbeeld:\\
+Kies $\alpha$ en $\beta$ als volgt.
+\[
+\alpha =
+\left\{
+\begin{pmatrix}
+1\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+0\\1
+\end{pmatrix}
+\right\}
+\text{ en }
+\beta
+=
+\begin{pmatrix}
+1\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+0\\2
+\end{pmatrix}
+\]
+$\alpha\cup\beta$ is niet vrij. want $2\alpha_2 = \beta_2$ geldt.
+\[
+\alpha\cup\beta = 
+\left\{
+\begin{pmatrix}
+1\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+0\\1
+\end{pmatrix}
+,
+\begin{pmatrix}
+0\\2
+\end{pmatrix}
+\right\}
+\]
+
+\subsubsection*{(b)}
+Niet waar. Tegenvoorbeeld:\\
+Kies $V = \mathbb{R}$, $W=\mathbb{R}$ en $\alpha$ en $\beta$ als volgt.
+\[
+\alpha = \{1\} \text{ en } \beta = \{2\}
+\]
+\[
+\alpha \cap \beta = \emptyset
+\]
+De doorsnede van $V$ en $W$ is $\mathbb{R}$, maar $\alpha \cap \beta$ vormt enkel een basis voor $\{0\}$.
+
+\subsubsection*{(c)}
+Niet waar. Tegenvoorbeeld:\\
+Kies $V= \mathbb{R}$, $v=-1$ en $w=1$.
+Nu geldt dat $v+w \in \{0\}$ en dat $\{0\}$ een deelruimte is van $V$. maar $v$ en $w$ zitten niet in $\{0\}$.
+
+\subsubsection*{(d)}
+Niet waar. Tegenvoorbeeld:\\
+Kies $V = \mathbb{R}^{2}$. Kies als drie deelruimten de deelruimten opgespannen door respectievelijk de volgende vectoren.
+\[
+v_1 = 
+\begin{pmatrix}
+1\\0
+\end{pmatrix}
+,
+v_2 = 
+\begin{pmatrix}
+1\\0.5
+\end{pmatrix}
+,
+v_3 = 
+\begin{pmatrix}
+0.5\\1
+\end{pmatrix}
+,
+v_4 = 
+\begin{pmatrix}
+0\\1
+\end{pmatrix}
+\]
+Deze deelruimten zijn niet gelijk, maar het zijn er wel  meer dan $2+1$.
+
+\subsubsection*{(e)}
+Waar. Voorbeeld.\\
+Kies $V = \mathbb{R}[X]_{\le 2}$ en $W = \mathbb{R}[X]_{\le 1}$.
+Kies $e_1,e_2,e_3$ als volgt. 
+\[
+e_1 = 1, e_2 = X, e_3= X^2
+\]
+Nu bestaat er een basis voor $V$ waarvan geen enkel element in $W$ zit, namelijk de volgende bijvoorbeeld.
+\[
+\left\{
+X^2, X^2+1, X^2+X
+\right\}
+\]
+
+
 \subsection{Oefening 30}
-
 \begin{proof}
-
 Eerst de optelling.
 De optelling is inwendig en overal bepaald zoals uit $R_{0}^{+} x R_{0}^{+} \rightarrow R_{0}^{+} $ 
 De optelling is associatief.
@@ -1147,7 +1247,7 @@ vct\{f_1,f_2,f_3\} = \mathbb{R}[X]_{n\le 2}
 
 \subsection{Opdracht 3.18 p 98}
 \label{3.18}
-Zij $(\mathbb{R},V,+)$ een vectorruimte. Zij $D$ een  van $V$ en $U_i$ deelruimten van $V$ die $D$ omvatten.
+Zij $(\mathbb{R},V,+)$ een vectorruimte. Zij $D$ een deelverzameling van $V$ en $U_i$ deelruimten van $V$ die $D$ omvatten.
 
 \subsubsection*{Te Bewijzen}
 \[
@@ -1161,9 +1261,9 @@ Elke deelruimte $U_i$ moet minstens elke lineaire combinatie van de vectoren in 
 De kleinste deelruimte $U_i$ die $D$ omvat is precies $vct(D)$. Hiervoor geldt dan $U_i = vct(D)$.
 Voor elke $U_i$ geldt dus het volgende.
 \[
-U_i \subseteq vct(D)
+vct(D) \subseteq U_i 
 \]
-Dit houdt precies in dat $vct(D) = \cap_iU_i$ geldt.
+Dit houdt precies in dat $vct(D) = \bigcap_iU_i$ geldt.
 \end{proof}
 
 

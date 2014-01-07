@@ -200,6 +200,7 @@ Omdat $\beta$ precies drie vectoren bevat moeten we enkel aantonen dat $\beta$ v
 \]
 Bovenstaande determinant toont aan dat $\beta$ vrij is.
 
+
 \subsection{Oefening 4}
 Stel dat $v=(a,b,c)$ een vector is die orthogonaal is met zowel $(1,2,0)$ als $(1,0,1)$, dan geldt voor $v$ het volgende.
 \[
@@ -213,7 +214,7 @@ Stel dat $v=(a,b,c)$ een vector is die orthogonaal is met zowel $(1,2,0)$ als $(
 \[
 \left\{
 \begin{array}{c}
-a + b + 0 = 0\\
+a + 2b + 0 = 0\\
 a + 0 + c = 0
 \end{array}
 \right.
@@ -222,7 +223,7 @@ Dit komt overeen met een homogeen stelsel dat beschreven wordt door de volgende 
 \[
 \left(
 \begin{array}{c c c | c}
-1 & 1 & 0 & 0\\
+1 & 2 & 0 & 0\\
 1 & 0 & 1 & 0
 \end{array}
 \right)
@@ -233,16 +234,17 @@ Hiervan bepalen we de oplossingen. We kunnen die aflezen nadat we de matrix te r
 \left(
 \begin{array}{c c c | c}
 1 & 0 & 1 & 0\\
-0 & 1 & -1 & 0
+0 & 2 & -1 & 0
 \end{array}
 \right)
 \]
 Hieruit lezen we de volgende oplossingsverzameling af.
 \[
 \left\{
-(-\lambda,\lambda,\lambda)\ |\ \lambda\in\mathbb{R}
+(-\lambda,\frac{\lambda}{2},\lambda)\ |\ \lambda\in\mathbb{R}
 \right\}
 \]
+
 
 \subsection{Oefening 5}
 Vooreerst normeren we $(1,2,0)$. Dit doen we door deze vector te delen door zijn lengte.
@@ -315,6 +317,22 @@ We hebben nu $\alpha$ georthonormaliseerd tot $\beta$.
 \right\}
 \]
 
+\subsection{Oefening 7}
+We zoeken drie orthonormale vectoren $v_1,v_2,v_3$ die aan de gegeven vergelijking $x+2y+z = 0$.
+\[
+v_i =
+\begin{pmatrix}
+x_i\\y_i\\z_i
+\end{pmatrix}
+\]
+\[
+\forall i,j\in \{1,2,3\}:\ \langle v_i,v_j\rangle = 0
+\]
+\[
+\forall i\in \{1,2,3\}:\ \Vert v_i\Vert = 1
+\]
+Elke $v_1$ is van de vorm $(\mu - 2\lambda,\lambda,\mu)$ omdat ze aan $x+2y+z=0$ voldoet.
+%TODO
 
 \subsection{Oefening 8}
 \subsubsection*{(a)}
@@ -603,6 +621,162 @@ De matrixvoorstelling van $T'\circ T$ ten opzichte van $\beta$ is orthogonaal
 \]
 Zie de eigenschappen van getransponeerde matrices \footnote{Zie Eigenschap 1.22 p 31 (c)} en inverse matrices \footnote{Zie Stelling 1.32 p 35}.
 \end{proof}
+
+
+\subsection{Oefening 14}
+\subsubsection*{(a)}
+\[
+A = 
+\begin{pmatrix}
+1 & 2 & 0\\
+2 & 2 & 2\\
+0 & 2 & 3\\
+\end{pmatrix}
+\]
+We zoeken eerst de eigenwaarden van de $A$, dit zijn $\{-1,2,5\}$.
+We zoeken nu bij elk van deze eigenwaarden een genormeerde eigenvector, maar daarvoor moeten we eerst de eigenruimten van elk van deze eigenwaarden bepalen.
+\begin{itemize}
+\item $E_{-1}$
+\[
+\begin{pmatrix}
+2 & 2 & 0\\
+2 & 3 & 2\\
+0 & 2 & 4\\
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 0 & -2\\
+0 & 1 & 2\\
+0 & 0 & 0\\
+\end{pmatrix}
+\]
+\[
+E_{-1} = 
+\left\{ 
+\lambda
+\begin{pmatrix}
+2 \\ -2\\ 1
+\end{pmatrix}
+| \lambda \in \mathbb{R}
+\right\}
+\]
+
+\item $E_{2}$
+\[
+\begin{pmatrix}
+-1 & 2 & 0\\
+2 & 0 & 2\\
+0 & 2 & 1\\
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 0 & 1\\
+0 & 1 & \frac{1}{2}\\
+0 & 0 & 0\\
+\end{pmatrix}
+\]
+\[
+E_{2} = 
+\left\{ 
+\lambda
+\begin{pmatrix}
+-1 \\ -\frac{1}{2} \\ 1
+\end{pmatrix}
+| \lambda \in \mathbb{R}
+\right\}
+\]
+
+\item $E_{5}$
+\[
+\begin{pmatrix}
+-4 & 2 & 0\\
+2 & -3 & 2\\
+0 & 2 & -2\\
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 0 & -\frac{1}{2}\\
+0 & 1 & -1\\
+0 & 0 & 0\\
+\end{pmatrix}
+\]
+\[
+E_{5} = 
+\left\{ 
+\lambda
+\begin{pmatrix}
+\frac{1}{2} \\ 1 \\ 1
+\end{pmatrix}
+| \lambda \in \mathbb{R}
+\right\}
+\]
+\end{itemize}
+We zoeken nu een genormeerde eigenvector uit elke eigenruimte.
+\[
+\left\Vert
+\lambda
+\begin{pmatrix}
+2 \\ -2\\ 1
+\end{pmatrix}
+\right\Vert
+=1
+\Leftrightarrow
+\lambda = \frac{\sqrt{5}}{5}
+\]
+\[
+\left\Vert
+\lambda
+\begin{pmatrix}
+-1 \\ -\frac{1}{2} \\ 1
+\end{pmatrix}
+\right\Vert
+=1
+\Leftrightarrow
+\lambda = \frac{3}{2}
+\]
+\[
+\left\Vert
+\lambda
+\begin{pmatrix}
+\frac{1}{2} \\ 1 \\ 1
+\end{pmatrix}
+\right\Vert
+=1
+\Leftrightarrow
+\lambda = \frac{3}{2}
+\]
+Werken we dit uit, dan vinden we volgende orthonormale basis van eigenvectoren.
+\[
+\left\{
+\begin{pmatrix}
+\frac{2\sqrt{5}}{5} \\ -\frac{2\sqrt{5}}{5}\\ \frac{\sqrt{5}}{5}
+\end{pmatrix}
+,
+\begin{pmatrix}
+-\frac{3}{2} \\ -\frac{3}{4} \\ \frac{3}{2}
+\end{pmatrix}
+,
+\begin{pmatrix}
+\frac{3}{4} \\ \frac{3}{2} \\ \frac{3}{2}
+\end{pmatrix}
+\right\}
+\]
+Zetten we nu deze vectoren als kolommen in een matrix, dan is deze matrix een orthogonale matrix en wel precies de $P$ die we zoeken.
+\[
+P=
+\begin{pmatrix}
+\frac{2\sqrt{5}}{5}  & -\frac{3}{2} & \frac{\sqrt{5}}{5}\\ 
+-\frac{2\sqrt{5}}{5} & -\frac{3}{4} & \frac{3}{2}\\ 
+\frac{\sqrt{5}}{5} & \frac{3}{2}    & \frac{3}{2}
+\end{pmatrix}
+\]
+
+
+\subsubsection*{(b)}
+
+
+\subsubsection*{(c)}
+
 
 
 \subsection{Oefening 19}
