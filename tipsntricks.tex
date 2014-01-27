@@ -11,9 +11,9 @@ Elke bewijs is voor de mensen die het lezen en uzelf. Alles in wiskunde is per d
 
 De proffen hebben graag een gedetailleerd bewijs, omdat ze na moeten gaan of \emph{jij} het kent. Ze moeten niet nagaan of de stelling waar is. Houd dit in gedachten wanneer u bewijzen schrijft.
 
-Tenslotte is het een goed idee om een goede kennis te ontwikkelen van de Nederlandse connectieven zoals 'hieruit volgt', 'daarom', 'dus', 'want', enz.... Deze maken bewijzen namelijk gemakkelijk duidelijker.
+Tenslotte is het een goed idee om een goede kennis te ontwikkelen van de Nederlandse connectieven zoals `hieruit volgt', `daarom', `dus', `want', enz.... Deze maken bewijzen namelijk gemakkelijk duidelijker.
 \subsubsection{Gegevens}
-Een bewijs heeft meestal de vorm beschreven in figuur \ref{algemeen_bewijs}. Merk op dat dit zeer sterk lijkt op het sjabloon van een oefening in de fysica, maar dan zonder het 'gegevens' deel. Dit wordt meestal weggelaten in bewijzen omdat in de wiskunde absoluut waar is. Als er iets gebruikt wordt moet er echter wel verwezen worden naar een uitleg waarom het waar is.
+Een bewijs heeft meestal de vorm beschreven in figuur \ref{algemeen_bewijs}. Merk op dat dit zeer sterk lijkt op het sjabloon van een oefening in de fysica, maar dan zonder het `gegevens' deel. Dit wordt meestal weggelaten in bewijzen omdat in de wiskunde absoluut waar is. Als er iets gebruikt wordt moet er echter wel verwezen worden naar een uitleg waarom het waar is.
 \begin{figure}[H]
 \begin{itemize}
 \item Naamgeving
@@ -49,7 +49,7 @@ We bewijzen dat de bewering $Q(p_i)$ geldt, waarin $p_i$ het kleinste element ui
 \item Inductiestap\\
 We gaan er nu van uit dat $Q(p_k)$ geldt voor een bepaalde $p$ (inductie hypothese). Vervolgens bewijzen we dat daaruit volgt dat de bewering geldt voor $p_{k+1}$.
 \item Besluit \\
-Om een bewijs met (volledige) inductie af te sluiten schrijven we altijd: "Uit het principe van volledige inductie en het feit dat zowel de basisstap waar is als de inductiehypothese, besluiten we dat: $\forall p\in P: Q(p)$."
+Om een bewijs met (volledige) inductie af te sluiten schrijven we altijd: ``Uit het principe van volledige inductie en het feit dat zowel de basisstap waar is als de inductiehypothese, besluiten we dat: $\forall p\in P: Q(p)$.''
 \end{enumerate}
 
 \subsection{Overzicht}
@@ -152,7 +152,7 @@ a_{21} & a_{22} & \cdots & a_{2n}\\
 a_{n1} & a_{n2} & \cdots & a_{nn}\\
 \end{pmatrix}
 \]
-We zullen $det(A)$ berekenen door \'e\'en van of een combinatie van twee methoden.
+We zullen $\det(A)$ berekenen door \'e\'en van of een combinatie van twee methoden.
 \begin{enumerate}
 \item De eerste methode is het ontwikkelen van $A$ naar rijen en/of kolommen tot de nog te berekenen matrices klein genoeg zijn. Een goede tip voor het ontwikkelen is om te ontwikkelen naar de rij/kolom die het meeste nullen bevat.
 
@@ -165,7 +165,7 @@ Idealiter reduceren we de matrix tot een driehoeksmatrix zodat de determinant he
 \subsection*{Voorbeeld}
 We zoeken de volgende determinant.
 \[
-det(A) =
+\det(A) =
 \begin{vmatrix}
 5 & 0 & 0 & 0 & 0\\
 1 & 4 & 3 & 2 & 0\\
@@ -214,7 +214,7 @@ De matrix waarvan we determinant nog niet kennen zullen we nu rij reduceren.
 \end{vmatrix}
 \]
 We zien nu al dat de derde kolom een veelvoud is van de tweede kolom.
-De gezochtte determinant is dus $det(A) = 0$.\\\\
+De gezochtte determinant is dus $\det(A) = 0$.\\\\
 Merk op dat deze werkwijze veel sneller is dan domweg ontwikkelen naar willekeurige rijen/kolommen.
 
 \section{Een vrije deelverzameling uitbreiden tot een basis}
@@ -276,7 +276,7 @@ z_{n1} & z_{n2} & \cdots & z_{nn}\\
 
 \subsection*{Voorbeeld}
 Zij $\alpha = \{3+2X+X^2,4-X^2,2+X\}$ en $\beta = \{2X^2-1,X+3,-X^2+X\}$.
-We schrijven de coordinaten van deze vectoren volgens de standaardbasis in de colommen van de volgende matrix.
+We schrijven de co\"ordinaten van deze vectoren volgens de standaardbasis in de colommen van de volgende matrix.
 \[
 \left(
 \begin{array}{c c c | c c c}
@@ -299,6 +299,7 @@ Id_\alpha^\beta =
 \]
 
 \section{Matrixvoorstelling van lineaire afbeelding ten opzichte van de standaardbasissen}
+\label{matrixvoorstelling_van_lineaire_afbeelding_ten_opzichte_van_de_standaardbasissen}
 Zij $L:V\rightarrow W$ een lineaire afbeelding van de $n$-dimensionale vectorruimte $(\mathbb{R},V,+)$ naar de $m$-dimensionale vectorruimte $(\mathbb{R},W,+)$. Willen we nu de matrixvoorstelling van $L$ ten opzichte van de standaard basissen $\epsilon_V$ en $\epsilon_W$.
 
 \subsection*{Generiek}
@@ -346,6 +347,11 @@ Dit is een $dimV \times dimW$ matrix.
 Bereken de matrices van basisverandering van $\alpha$ naar $\epsilon_1$ en van $\beta$ naar $\epsilon_2$. Bereken ook de inversen ervan indien nodig.
 
 \item
+Vermeningvuldig de berekende matrices als volgt.
+\[
+L_{\alpha}^{\beta}
+= Id_{\epsilon_2}^{\beta} \cdot L_{\epsilon_1}^{\epsilon_2} \cdot Id_{\alpha}^{\epsilon_1} 
+\]
 \end{enumerate}
 
 
@@ -483,9 +489,80 @@ L_{\alpha}^{\beta} =
 \]
 %TODO uitrekenen
 
-
 \end{enumerate}
 
+\section{Basissen zodat een lineaire afbeelding een specifieke matrix wordt}
+\label{specifieke_basissen_voor_lineaire_afbeelding}
+\subsection*{Generiek}
+\subsubsection*{Opgave}
+Zij $L: \mathbb{R}^m \rightarrow \mathbb{R}^n$ een lineaire afbeelding waarvan de matrix ten opzichte van de standaardbasissen $\epsilon_m$ en $\epsilon_n$ gelijk is aan $L_{\epsilon_m}^{\epsilon_n}$
+\[
+L_{\epsilon_m}^{\epsilon_n} =
+\begin{pmatrix}
+l_{11} & l_{12} & \cdots & l_{1m}\\
+l_{21} & l_{22} & \cdots & l_{2m}\\
+\vdots & \vdots & \ddots & \vdots\\
+l_{n1} & l_{n2} & \cdots & l_{nm}\\
+\end{pmatrix}
+\]
+Bepaal basissen $\beta_n$ van $\mathbb{R}^n$ en $\beta_m$ van $\mathbb{R}^m$ zodat $L_{\beta_m}^{\beta_n}$ er als volgt uit ziet:
+\[
+L_{\beta_m}^{\beta_n} = 
+\begin{pmatrix}
+\mathbb{I}_r & O\\
+O & O\\
+\end{pmatrix}
+\]
+$r$ is hier de rang van $L$ en $O$ zijn blokmatrices van nullen zodat $L_{\beta_m}^{\beta_n}$ zinvolle afmetingen heeft.
+\subsubsection*{Oplossing}
+Allereerst berekenen we de rang van $L$. Dit kunnen we doen door $L$ te rijreduceren. Noem $L'$ de rijreductie van $L$. $L'$ ziet er dan als volgt uit.
+\[
+L' = 
+\begin{pmatrix}
+1 & 0 & \cdots & 0 & l'_{1,r+1} & \cdots & l'_{1,m}\\
+0 & 1 & \cdots & 0 & l'_{2,r+1} & \cdots & l'_{2,m}\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & 1 & l'_{r,r+1} & \cdots & l'_{r,m}\\
+0 & 0 & \cdots & 0 & 0 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & 0 & 0 & \cdots & 0\\
+\end{pmatrix}
+\]
+Hieruit kunnen we eenvoudigweg de kern van $L$ aflezen.
+\[
+Ker(L) = 
+\left\{
+\begin{pmatrix}
+-\sum_{i=1}^{m-r} \lambda_il'_{1,r+i}\\
+-\sum_{i=1}^{m-r} \lambda_il'_{2,r+i}\\
+\vdots\\
+-\sum_{i=1}^{m-r} \lambda_il'_{m,r+i}
+\end{pmatrix}
+\ |\ 
+\lambda_1,\lambda_2,...,\lambda_{m-r} \in \mathbb{R}
+\right\}
+\]
+We weten nu ook dat $L_{\beta_m}^{\beta_n}$ er als volgt uit ziet. $L_{\beta_m}^{\beta_n}$ is een $m\times n$ matrix met $\mathbb{I}_r$ linksboven.
+\[
+L_{\beta_m}^{\beta_n} = 
+\begin{pmatrix}
+1 & 0 & \cdots & 0 & 0 & \cdots & 0\\
+0 & 1 & \cdots & 0 & 0 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & 1 & 0 & \cdots & 0\\
+0 & 0 & \cdots & 0 & 0 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & 0 & 0 & \cdots & 0\\
+\end{pmatrix}
+\]
+We nemen eerst $r$ gemakkelijke vectoren uit $\mathbb{R}^m$ als basisvectoren $\beta_{m,1},...,\beta_{m,r}$ en beelden deze af op $r$ basisvectoren van $\mathbb{R}^n$, $L(\beta_{m,1}),...,L(\beta_{m,r}) = \beta_{n,1},...,\beta_{n,r}$. Zorg ervoor dat deze vectoren \emph{niet} in de kern van $L$ zitten en lineair onafhankelijk zijn.
+We kiezen nu nog $m-r$ lineair onafhankelijke vectoren uit $\mathbb{R}^m$ om de basis voor $\mathbb{R}^m$ compleet te maken. Tenslotte kiezen we nog $n-r$ lineair onafhankelijke vectoren uit de kern van $\mathbb{R}^n$ om de basis voor $\mathbb{R}^n$ compleet te maken.
+
+\subsection*{Voorbeeld}
+
+\subsubsection*{Opgave}
+
+\subsubsection*{Oplossing}
 
 
 

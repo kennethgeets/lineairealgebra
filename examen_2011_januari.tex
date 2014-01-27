@@ -3,4 +3,343 @@
 
 \section{Examen Januari 2011}
 
+\subsection{Vraag 1 (Theorie)}
+\subsubsection*{(a)}
+Dit staat letterlijk in de cursus.
+Zie Stelling 3.42 p. 109 (\ref{3.42}).
+
+\subsubsection*{(b)}
+Dit staat ook letterlijk in de cursus.
+Zie Stelling 4.43 p. 164 (\ref{4.43}).
+
+\subsection{Vraag 2 (Theorie)}
+Dit staat letterlijk in de cursus.
+Zie Stelling 6.36 p 243 (\ref{6.36}).
+
+
+\subsection{Vraag 3}
+\subsubsection*{(a)}
+\begin{proof}
+\[
+\begin{vmatrix}
+-\lambda & 0 & \cdots & 0 & -a_0\\
+1 & -\lambda & \cdots & 0 & -a_1\\
+0 & 1 & \cdots & 0 & -a_2\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & \cdots & 1 & -a_{n-1}-\lambda
+\end{vmatrix}
+=
+-\lambda
+\begin{vmatrix}
+-\lambda & \cdots & 0 & -a_1\\
+1 & \cdots & 0 & -a_2\\
+\vdots & \ddots & \vdots & \vdots\\
+0 & \cdots & 1 & -a_{n-1}-\lambda
+\end{vmatrix}
+-
+\begin{vmatrix}
+0 & \cdots & 0 & -a_0\\
+1 & \cdots & 0 & -a_2\\
+\vdots & \ddots & \vdots & \vdots\\
+0 & \cdots & 1 & -a_{n-1}-\lambda
+\end{vmatrix}
+\]
+Wanneer we dit uitwerken krijgen we het volgende.
+\[
+a_0 + \lambda(a_1 + \lambda(a_2 + \lambda(... + \lambda(a_{n-1} + \lambda)))\cdots)
+\]
+\end{proof}
+
+\subsubsection*{(b)}
+Zij $\lambda$ een willekeurige eigenwaarde van $L$. We weten bovendien dat $\lambda = 0$ geen nulpunt is van vorige functie.
+\[
+\begin{pmatrix}
+-\lambda & 0 & \cdots & 0 & -a_0\\
+1 & -\lambda & \cdots & 0 & -a_1\\
+0 & 1 & \cdots & 0 & -a_2\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & \cdots & 1 & -a_{n-1}-\lambda
+\end{pmatrix}
+\]
+\[
+\rightarrow
+\begin{pmatrix}
+-\lambda & 0 & \cdots & 0 & -a_0\\
+0 & -\lambda^2 & \cdots & 0 & -\lambda a_1-a_0\\
+0 & 0 & \cdots & 0 & -\lambda a_2-\lambda(\lambda a_1-a_0)\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & \cdots & 0 & -a_0 + \lambda(a_1 + \lambda(a_2 + \lambda(... + \lambda(a_{n-1} + \lambda)))\cdots)
+\end{pmatrix}
+\]
+Aangezien het element, het meest rechtsonder in die matrix een nul is, en er voor de rest geen nulrijen zijn, is $E_\lambda$ \'e'endimensionaal.
+
+\subsubsection*{(c)}
+\begin{proof}
+Wanneer $L$ $n$ (\'e\'endimensionale) eigenruimten heeft, heeft $L$ $n$ verschillende eigenwaarden\footnote{Zie Stelling 5.18 p. 190 (\ref{5.18})}. Omdat er evenveel verschillende eigenwaarden zijn van $L$ als er dimensies zijn in $\mathbb{R}^n$ is het spectrum van $L$ enkelvoudig. Elke lineaire transformatie met een enkelvoudig spectrum is diagonaliseerbaar \footnote{Zie Gevolg 5.20 p. 191 (\ref{5.20})}.
+\end{proof}
+
+\subsection{Vraag 4}
+\subsubsection*{(a)}
+Fout. Tegenvoorbeeld:
+Kies $U_1$ als de $x$-as. Kies $U_1$ als de $y$-as en kies $U_3$ als de identieke $\leftrightarrow y=x$.
+\[
+V = U_1 \oplus U_2
+\]
+Maar
+\[
+(U_3 \cap U_1) = \{\vec{0}\}
+\]
+\[
+(U_3 \cap U_2) = \{\vec{0}\}
+\]
+\[
+U_2 \neq \{\vec{0}\} \oplus \{\vec{0}\}
+\]
+
+\subsubsection*{(b)}
+Juist.
+\begin{proof}
+We bewijzen dat elke vector in het linkerlid in de verzameling in het rechterlid zit, en omgekeerd.
+\[
+W_1 = U_1^\bot \cap U_2^\bot = \{\ v\ |\ \langle v,u_1\rangle = 0 \langle v,u_2\rangle = 0\ \}
+\]
+\[
+W_2 = (U_1+U_2)^\bot = \{\ v\ |\ \langle v, u_1+u_2\rangle = 0\ \}
+\]
+\begin{itemize}
+\item $\subseteq$\\
+Kies een willekeurige $w_1 \in W_1$, een $u_1 \in U_1$ en een $u_2 \in U_2$. $\langle w_1,u_1\rangle = 0$ en $\langle w_1,u_2\rangle = 0$ geldt. Tellen we nu deze vergelijkingen bij elkaar op, dan krijgen we de volgende:
+\[
+\langle w_1,u_1\rangle + \langle w_1,u_2\rangle = 0
+\]
+We gebruiken nu de lineariteit van het inproduct in de tweede component.
+\[
+\langle w_1,u_1+u_2\rangle = 0
+\]
+Dit betekent dat $w_1 \in W_2$ geldt.
+
+\item $\supseteq$\\
+Kies een willekeurige $w_2 \in W_2$, een $u_1 \in U_1$ en een $u_2 \in U_2$. $\langle w_2,u_1+u_2\rangle = 0$ en geldt.
+Omdat dit voor elke $u_1$ en $u_2$ geldt geldt het ook als $u_1=0$ en als $u_2=0$. $w_2$ staat dus ook loodrecht op $u_1$ en $u_2$ appart en zit daarom in $W_1$.
+\end{itemize}
+\end{proof}
+
+\subsection{Vraag 5}
+\subsubsection*{(a)}
+De matrix van $A$ ten opzichte van de standaardbasis noemen we $A_{\epsilon_3}$.
+\[
+A_{\epsilon_3}=
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 1 & 0\\
+1 & 0 & 1
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 0 & 1\\
+0 & 1 & -1\\
+0 & 0 & 0
+\end{pmatrix}
+\]
+De kern van $A$ is dus de volgende verzameling:
+\[
+Ker(A) = 
+\left\{
+\begin{pmatrix}
+-\lambda\\\lambda\\\lambda
+\end{pmatrix}
+\ |\ \lambda\in\mathbb{R}
+\right\}
+\]
+Mits enig inzicht zien we ook dat het beeld van $A$ er als volgt uit ziet.
+\[
+Im(A) = 
+\left\{
+\begin{pmatrix}
+\lambda\\\lambda\\\mu
+\end{pmatrix}
+\ |\ \lambda,\mu\in\mathbb{R}
+\right\}
+\]
+De dimensie van $Ker(A)$ is $1$ en de dimensie van $Im(A)$ is $2$.
+Kies de volgende verzamelingen respectievelijk als basis voor $Ker(A)$ en voor $Im(A)$.
+\[
+\left\{
+\begin{pmatrix}
+-1\\1\\1
+\end{pmatrix}
+\right\}
+\]
+\[
+\left\{
+\begin{pmatrix}
+1\\1\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+0\\0\\1
+\end{pmatrix}
+\right\}
+\]
+
+\subsubsection*{(b)}
+Kies $v_1 = (1,0,0)$ en $v_2 = (0,1,0)$ buiten de kern van $A$. De beelden van deze vectoren zijn $w_1=(1,1,1)$, $w_2=(1,1,0)$. Kies nu nog een lineair onafhankelijke $v_3=(-1,1,1)$ uit de kern van $A$ en nog een lineair onafhankelijke $w_3 = (1,0,0)$ \footnote{Voor meer details over deze procedure, zie \ref{specifieke_basissen_voor_lineaire_afbeelding}.}.
+$V$ en $W$ zien er nu als volgt uit.
+\[
+V = 
+\left\{
+\begin{pmatrix}
+1\\0\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+0\\1\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+-1\\1\\1
+\end{pmatrix}
+\right\}
+\]
+\[
+W = 
+\left\{
+\begin{pmatrix}
+1\\1\\1
+\end{pmatrix}
+,
+\begin{pmatrix}
+1\\1\\0
+\end{pmatrix}
+,
+\begin{pmatrix}
+1\\0\\0
+\end{pmatrix}
+\right\}
+\]
+
+\subsubsection*{(c)}
+Nee, het beeld van $M_{V,W}$ heeft maar \'e\'en dimensie, en dat van $A$ heeft er twee.
+
+\subsubsection*{(d)}
+We zoeken de eigenwaarden van $A$.
+\[
+\begin{vmatrix}
+1-\lambda & 1 & 0\\
+1 & 1-\lambda & 0\\
+1 & 0 & 1-\lambda
+\end{vmatrix}
+=
+(1-\lambda)
+\begin{vmatrix}
+1-\lambda & 1\\
+1 & 1-\lambda
+\end{vmatrix}
+=
+(1-\lambda)((1-\lambda)^2-1)
+\]
+\[
+(1-\lambda)(\lambda^2-2\lambda)
+=
+\lambda(1-\lambda)(\lambda-2)
+\]
+Omdat $A$ drie verschillende eigenwaarden heeft, heeft $A$ een enkelvoudig spectrum en is $A$ dus diagonaliseerbaar\footnote{Zie Gevolg 5.20 p. 191 (\ref{5.20})}. $A$ is dus gelijkvormig met een diagonaalmatrix en deze gelijkvormigheid wordt gerealiseerd door een basisverandering naar een basis van eigenvectoren\footnote{Zie Definitie 5.6 p. 181 (\ref{5.6})}.
+
+
+\subsection{Vraag 6}
+\subsubsection*{(a)}
+$U$ is een strikte deelverzameling als de gegeven vectoren lineair afhankelijk zijn.
+\[
+\begin{vmatrix}
+a & b & c\\
+a & 2b & 3c\\
+a & c & c
+\end{vmatrix}
+=
+\begin{vmatrix}
+a & b & c\\
+0 & b & 2c\\
+0 & c-b & 0
+\end{vmatrix}
+=
+a
+\begin{vmatrix}
+b & 2c\\
+c-b & 0
+\end{vmatrix}
+=
+2ac(c-b)
+\]
+Deze determinant is nul wanneer $a=0\vee c=0\vee c=b$ geldt.
+
+\subsubsection*{(b)}
+\[
+\left\{
+\begin{pmatrix}
+a\\b\\c\\
+\end{pmatrix}
+,
+\begin{pmatrix}
+a\\2b\\c\\
+\end{pmatrix}
+,
+\begin{pmatrix}
+a\\c\\c\\
+\end{pmatrix}
+\right\}
+=
+\left\{
+\begin{pmatrix}
+a\\b\\b\\
+\end{pmatrix}
+,
+\begin{pmatrix}
+a\\2b\\b\\
+\end{pmatrix}
+,
+\begin{pmatrix}
+a\\b\\b\\
+\end{pmatrix}
+\right\}
+\]
+We kunnen deze verzameling uitdunnen tot een basis voor $U$\footnote{Zie Stelling 3.37 p. 107 (\ref{3.37})}. Schrap de laatste, omdat ze gelijk is aan de eerste, zodat de volgende basis voor $U$ overblijft.
+\[
+\left\{
+\begin{pmatrix}
+a\\b\\b\\
+\end{pmatrix}
+,
+\begin{pmatrix}
+a\\2b\\b\\
+\end{pmatrix}
+\right\}
+\]
+
+\subsubsection*{(c)}
+We zoeken de vectoren $v= (x,y,z)$ zodat $v$ zowel loodrecht op $(a,b,b)$ als op $(a,2b,b)$ staat.
+\[
+\begin{pmatrix}
+a & b & b\\
+a & 2b & b
+\end{pmatrix}
+X=\vec{0}
+\]
+\[
+\rightarrow
+\begin{pmatrix}[ccc|c]
+a & 0 & b & 0\\
+0 & b & 0 & 0
+\end{pmatrix}
+\]
+\[
+U^\bot = 
+\left\{
+\begin{pmatrix}
+-\lambda\frac{b}{a} \\ 0 \\ \lambda
+\end{pmatrix}
+\ |\ \lambda\in\mathbb{R}
+\right\}
+\]
+
+
 \end{document}

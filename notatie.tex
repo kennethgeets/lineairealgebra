@@ -42,15 +42,15 @@ Met dit voorbeeld is eveneens aangetoond dat standaardnotatie belangrijk is en d
 %TODO remove?
 In deze sectie beschouwen we expressies. Dit deel vindt de auteur zelf vrij belangrijk en heeft hij nog nooit ergens expliciet beschreven gezien.\\\\
 In assembleertalen bestaan er enkel statements, deze strings \emph{doen} iets. In procedurale programmeertalen bestaan er vaak nog expressies naast statements. Expressies \emph{zijn} iets. Ze hebben een waarde. In functionele programmeertalen en in de wiskunde zijn er \emph{enkel} expressies. Elke uitdrukking heeft een waarde.\\\\
-Zo heeft '$5+3$' de \emph{waarde} '$8$' en '$v-v$' de waarde '$\vec{0}$'. We zeggen dan al gauw dat '$5+3$' '$8$' \emph{is} maar dat is niet helemaal volledig. '$5+3$' heeft wel de waarde '$8$' maar '$5+3$' is niet gelijk aan '$8$', enkel gelijk\emph{waardig}.\\\\
+Zo heeft `$5+3$' de \emph{waarde} `$8$' en `$v-v$' de waarde `$\vec{0}$'. We zeggen dan al gauw dat `$5+3$' `$8$' \emph{is} maar dat is niet helemaal volledig. `$5+3$' heeft wel de waarde `$8$' maar `$5+3$' is niet gelijk aan `$8$', enkel gelijk\emph{waardig}.\\\\
 We schrijven meestal enkel de expressies op die waar zijn, anders spreken we van een fout. $5+3=8$ is waar, dus we kunnen dat opschrijven. $5+2=8$ is niet waar, maar we kunnen het toch opschrijven, omdat we lef hebben of gewoon om moeilijk te doen. Om een goed onderscheid te maken, defini\"eren we de \emph{waarde} van $5+3=8$ als $true$, waar of iets dergelijks en de \emph{waarde} van $5+2=8$ als $false$, onwaar, fout etc....\\\\
-Hierom maakt dit werk gebruik van verwoordingen als 'bijgevolg geldt $a=3$' of 'zodat $a=3$ geldt' in plaats van 'zodat $a=3$' of 'bijgevolg is $a=3$'.
-Dit laatste is bovendien moeilijker uit te spreken ('bijgevolg is \emph{$a$ is drie}').\\\\
+Hierom maakt dit werk gebruik van verwoordingen als `bijgevolg geldt $a=3$' of `zodat $a=3$ geldt' in plaats van `zodat $a=3$' of `bijgevolg is $a=3$'.
+Dit laatste is bovendien moeilijker uit te spreken (`bijgevolg is \emph{$a$ is drie}').\\\\
 Als je verder niets onthoudt van deze paragraaf, onthoud dan enkel dat expressies een waarde hebben en dat gelijkheid eigenlijk gelijkwaardigheid betekent. 
 
 \subsection{Indices}
 Vaak spreken we over meerdere gelijkaardige elementen met indices. Beschouw bijvoorbeeld de verzameling $\{a_1,a_2,...,a_n\}$.
-Wanneer we spreken van 'alle $a_i$' betekent dit: 'Elk element uit de verzameling', of nog: 'Elk element $a$ waarbij we een zinvolle index $i$ kunnen zetten'.
+Wanneer we spreken van `alle $a_i$' betekent dit: `Elk element uit de verzameling', of nog: `Elk element $a$ waarbij we een zinvolle index $i$ kunnen zetten'.
  
 \subsection{Sommaties, Producten en andere}
 De betekenis van het sommatie- en productteken is u waarschijnlijk bekend, maar wordt hier toch nog eens expliciet vermeld als inleiding tot wat volgt. 
@@ -92,7 +92,10 @@ a_{1}\\a_{2}\\\vdots\\a_{n}
 \end{pmatrix}
 \]
 Onbekende vectoren worden meestal als $X$ en $Y$ aangeduid, of $\vec{x}$ en $\vec{y}$. Deze worden meestal gebruikt in stelsels.\\\\
-De verzameling van alle re\"ele co\"ordinaatvectoren met $n$ elementen word met $\mathbb{R}^n$ aangeduid. Analoog wordt de verzameling van de complexe co\"ordinaatvectoren met $\mathbb{C}^n$ aangeduid.
+De verzameling van alle re\"ele co\"ordinaatvectoren met $n$ elementen wordt met $\mathbb{R}^n$ aangeduid. Analoog wordt de verzameling van de complexe co\"ordinaatvectoren met $\mathbb{C}^n$ aangeduid.
+
+\subsection{Nulvector}
+Dit is het beste voorbeeld van verwarrende notatie in de cursus. In de cursus worden nul en de nulvector beide met $0$ aangeduid. In dit boek wordt de nulvector met $\vec{0}$ aangeduid, zeker wanneer het tot verwarring zou kunnen leiden.
 
 \section{Matrices}
 Matrices worden meestal met een drukletter aangeduid.
@@ -120,7 +123,7 @@ A_{m1} & A_{m2} & \cdots & A_{mn}\\
 (A)_{m1} & (A)_{m2} & \cdots & (A)_{mn}\\
 \end{pmatrix}
 \]
-De verzameling van alle re\"ele $m\times n$ matrices word met $\mathbb{R}^n$ aangeduid.
+De verzameling van alle re\"ele $m\times n$ matrices wordt met $\mathbb{R}^n$ aangeduid.
 Analoog wordt de verzameling van de complexe matrices met $\mathbb{C}^{m\times n}$ aangeduid.
 Voor de duidelijkheid, een $m \times n$ matrix heeft $m$ rijen en $n$ kolommen.
 De kolommen en rijen hebben respectievelijk lengte $n$ en $m$.
@@ -176,7 +179,7 @@ Ja, dit is waarschijnlijk overbodig, maar het wordt hier toch opgesomd.
 Symbool & Lees als\\
 \hline
 $=$ & ... is gelijkwaardig aan ...\\
-$\approx$ & ... is ongeveer gelijkwaardig aan ... \footnote{\ '$\approx$' heeft geen enkele wiskundige waarde, enkel wetenschappelijke waarde.}\\
+$\approx$ & ... is ongeveer gelijkwaardig aan ... \footnote{\ `$\approx$' heeft geen enkele wiskundige waarde, enkel wetenschappelijke waarde.}\\
 $\in$ & ... is een element van ...\\
 $\subset$ & ... is een deelverzameling van ...\\
 $\subseteq$ & ... is een deelverzameling van of is gelijk aan ...\\
@@ -204,28 +207,28 @@ $a \text{ is } O(b)$ & $a$ is van grootteorde $b$.\\
 \hline
 \text{HoofdLetter} & \text{Kleine Letter}	& \text{Lees als}\\
 \hline
-			& \alpha	& alpha\\
-			& \beta		& beta\\
+A			& \alpha	& alpha\\
+B			& \beta		& beta\\
 \Gamma 		& \gamma 	& gamma\\
 \Delta 		& \delta 	& delta\\
-			& \epsilon	& epsilon\\
-			& \zeta		& zeta\\
-			& \eta 		& eta\\
+E			& \epsilon	& epsilon\\
+Z			& \zeta		& zeta\\
+H			& \eta 		& eta\\
 \Theta 		& \theta 	& theta\\
-			& \iota 	& iota\\
-			& \kappa 	& kappa\\
+I			& \iota 	& iota\\
+K			& \kappa 	& kappa\\
 \Lambda 	& \lambda	& lambda\\
-			& \mu 		& mu\\
-			& \nu 		& nu\\
-\Xi 		& \xi 		& xi\\
-			& o			& omicron\\
+M			& \mu 		& mu\\
+N			& \nu 		& nu\\
+X 			& \xi 		& xi\\
+O			& o			& omicron\\
 \Pi 		& \pi 		& pi\\
-			& \rho 		& rho\\
+P			& \rho 		& rho\\
 \Sigma 		& \sigma 	& sigma\\
-			& \tau 		& tau\\
+T			& \tau 		& tau\\
 \Upsilon 	& \upsilon 	& upsilon\\
 \Phi 		& \phi 		& phi\\
-			& \chi 		& chi\\
+X			& \chi 		& chi\\
 \Psi 		& \psi 		& psi\\
 \Omega 		& \omega	& omega\\
 \hline

@@ -2,5 +2,102 @@
 \begin{document}
 
 \section{Examen Januari 2010}
+\subsection{Vraag 1 (Theorie)}
+\subsubsection*{(a)}
+Dit bewijs staat letterlijk in de cursus. Zie Stelling 3.37 p. 107 (\ref{3.37}).
+
+\subsubsection*{(b)}
+Afgezien van het feit dat een algoritme een probleem zou hebben met oneindigdimensionale vectorruimten, zou dit geen probleem mogen vormen.
+
+\subsection{Vraag 2 (Theorie)}
+Dit bewijs staat letterlijk in de cursus. Zie Stelling 5.18 p. 190 (\ref{5.18}).
+
+\subsection{Vraag 3}
+\subsubsection*{(a)}
+We lossen volgend stelsel op.
+\[
+\begin{pmatrix}[cccccccccccccccc|c]
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & -1\\
+1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & -1 & 0\\
+1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+\end{pmatrix}
+\]
+De matrix van $A$ is dus de volgende:
+\[
+A =
+\begin{pmatrix}
+1 & -1 & 0 & -1\\
+2 & -1 & -1 & -1\\
+1 & -1 & 0 & -1\\
+-1 & 0 & 1 & 0
+\end{pmatrix}
+\]
+
+\subsubsection*{(b)}
+Ja.
+%TODO geef er.
+
+%\subsection{Vraag 4}
+%\subsubsection*{(a)}
+%TODO
+%\subsubsection*{(b)}
+%TODO
+
+\subsection{Vraag 5}
+\[
+\begin{vmatrix}
+10+c-\lambda & c-2 & 4-2c\\
+c-2 & 10+c-\lambda & 4-2c\\
+4-2c & 4-2c & 4+4c-\lambda\\
+\end{vmatrix}
+=
+0
+\]
+
+\subsection{Vraag 6}
+Dit is een oefening die letterlijk in de cursus staat. Zie oefening 18 van hoofdstuk 6 (\ref{oef:6.18}).
+
+
+\subsection{Vraag 7}
+\begin{itemize}
+\item $\Rightarrow$\\
+\begin{itemize}
+\item Stel dat $f$ surjectief is.\\
+\[
+rang(f) = dim(W)
+\]
+De rang van $g$ is hoogstens de dimensie van $W$. De rang van $g$ is dus ook hoogstens de rang van $f$. 
+\item Stel dat $f$ injectief is.\\
+\[
+rang(f) = dim(V)
+\]
+De rang van $g$ is hoogstens de dimensie van $V$. De rang van $g$ is dus ook hoogstens de rang van $f$. 
+\end{itemize}
+\item $\Leftarrow$\\
+Stel $rang(g) \le rang(f)$ maar $f$ is noch injectief, noch surjectief.
+Nu gelden volgende beweringen.
+\[
+rang(f) \le dim(V) \text{ en } rang(f) \le dim(W)
+\]
+\begin{itemize}
+\item Stel $dim V \le dim W$\\
+Nu bestaat er een surjectieve $g$ zodat $rang(g) = dim(V) \le rang (g)$.
+\item Stel $dim V \ge dim W$\\
+Nu bestaat er een injectieve $g$ zodat $rang(g) = dim(W) ŋe rang(f)$.
+\end{itemize}
+\end{itemize}
 
 \end{document}
